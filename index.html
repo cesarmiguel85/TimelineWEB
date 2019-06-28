@@ -15,6 +15,7 @@
     <script src="js/papaparse.min.js"></script>
 
     <script>
+        //Function to get parameters from GET request when calling URL
         function findGetParameter(parameterName) {
             var result = null,
                 tmp = [];
@@ -28,23 +29,28 @@
     </script>
 
     <script>
+        //Create arrays with values
         let timeDate = [];
         let timeDesc = [];
         let timeDone = [];
 
+        //Get key to Google Sheet, sheet id and timeline range (ignore header! ex: F2:H100)
         let key = findGetParameter("key");
         let sheet = findGetParameter("sheet");
         let range = findGetParameter("range");
 
+        //Use papaparse to get data from CSV
         Papa.parse("https://docs.google.com/spreadsheet/pub?key=" + key + "&single=true&gid=" + sheet + "&range=" + range + "&output=csv", {
             download: true,
             step: function(row) {
-                //console.log("Row:", row.data);
+                //Iterate each row
                 timeDate.push(row.data[0]);
                 timeDesc.push(row.data[1]);
                 timeDone.push(row.data[2]);
             },
             complete: function() {
+                //When finished parsing...
+
                 console.log("All done!");
                 console.log(timeDate);
                 console.log(timeDesc);
@@ -54,6 +60,7 @@
                 let myclass = "";
                 let myprogess = "";
 
+                //Create the <li> elements
                 for (var i = 0; i < timeDate.length; i++) {
 
                     myclass = "";
