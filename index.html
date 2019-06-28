@@ -10,6 +10,7 @@
 
     <link href="css/progress-wizard.min.css" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <script src="js/papaparse.min.js"></script>
@@ -75,12 +76,12 @@
                             break;
                         default:
                             myclass = "active";
-                            myprogress = "[Progress: " + timeDone[i] * 100 + "%]";
+                            myprogress = "[Progress: " + timeDone[i] * 100 + "%]<br>";
                     }
 
                     $("#timeline").append(`
                     <li class="` + myclass + `">
-                        <span class="bubble"></span>` + timeDate[i] + `<br><small>` + myprogress + `<br>` + timeDesc[i] + `</small>
+                        <span class="bubble"></span>` + timeDate[i] + `<br><br><small>` + myprogress + timeDesc[i] + `</small>
                     </li>
                     `);
 

@@ -1,3 +1,13 @@
+:root {
+    --mydone: #929292;
+    --myongoing: #b48f5aff;
+    --mytodo: rgb(1, 45, 190);
+}
+
+body * {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .flexer,
 .progress-indicator {
     display: -webkit-box;
@@ -42,27 +52,27 @@
     margin: 0;
     position: relative;
     text-overflow: ellipsis;
-    color: #bbb;
+    color: var(--mytodo);
     display: block
 }
 
 .progress-indicator>li:hover {
-    color: #6f6f6f
+    color: var(--mytodo);
 }
 
 .progress-indicator>li.completed,
 .progress-indicator>li.completed .bubble {
-    color: #65d074
+    color: var(--mydone);
 }
 
 .progress-indicator>li .bubble {
     border-radius: 1000px;
     width: 20px;
     height: 20px;
-    background-color: #bbb;
+    background-color: var(--mytodo);
     display: block;
     margin: 0 auto .5em;
-    border-bottom: 1px solid #888
+    border-bottom: 1px solid var(--mytodo);
 }
 
 .progress-indicator>li .bubble:after,
@@ -73,14 +83,14 @@
     width: 100%;
     height: 3px;
     content: '';
-    background-color: #bbb
+    background-color: var(--mytodo);
 }
 
 .progress-indicator>li.completed .bubble,
 .progress-indicator>li.completed .bubble:after,
 .progress-indicator>li.completed .bubble:before {
-    background-color: #65d074;
-    border-color: #247830
+    background-color: var(--mydone);
+    border-color: var(--mydone);
 }
 
 .progress-indicator>li .bubble:before {
@@ -105,14 +115,14 @@
 
 .progress-indicator>li.active,
 .progress-indicator>li.active .bubble {
-    color: #337AB7
+    color: var(--myongoing);
 }
 
 .progress-indicator>li.active .bubble,
 .progress-indicator>li.active .bubble:after,
 .progress-indicator>li.active .bubble:before {
-    background-color: #337AB7;
-    border-color: #122a3f
+    background-color: var(--myongoing);
+    border-color: var(--myongoing);
 }
 
 .progress-indicator>li a:hover .bubble,
@@ -209,4 +219,14 @@ screen and (max-width:400px) {
     .progress-indicator {
         font-size: 60%
     }
+}
+
+#timeline li {
+    font-weight: bolder;
+}
+
+#timeline li small {
+    font-weight: normal;
+    text-transform: initial;
+    font-size: small;
 }
