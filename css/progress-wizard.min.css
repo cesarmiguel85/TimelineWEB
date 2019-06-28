@@ -1,7 +1,7 @@
 :root {
     --mydone: #929292;
     --myongoing: #b48f5aff;
-    --mytodo: rgb(1, 45, 190);
+    --mytodo: rgb(41, 71, 170);
 }
 
 body * {
