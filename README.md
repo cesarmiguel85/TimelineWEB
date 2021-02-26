@@ -20,6 +20,6 @@ range: range with data (without headers)
 - Description
 - Progress (0:done or 1:todo)
 
-** EXAMPLE REQUEST (ids are not real, link not working, it is just to give a syntax example)**
+** EXAMPLE REQUEST (ids are not real, link not working, it is just to give a syntax example) **
 
 https://cesarmiguel85.github.io/TimelineWEB/index.html?key=1RmLSPsRnB-s93FkFDrZnr5rGestwebNn0bQ1XbYYITc&sheet=1420769761&range=E2:G100
