@@ -4,6 +4,11 @@ Used to integrate a timeline component into a Data Studio dashboard.
 ![GitHub Logo](/example.jpg)
 Format: ![Timeline example](url)
 
+## Technology
+* HTML/CSS
+* Papaparse for google sheet parsing
+* JQuery 2.1.4
+
 ## Input: GET parameters
 key: google sheet key id 
 sheet: sheet's id (gid)
