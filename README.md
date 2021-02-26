@@ -1,8 +1,7 @@
 # TimelineWEB
 A simple web component to display a timeline sequence (equidistant spaced points).
 Used to integrate a timeline component into a Data Studio dashboard.
-![GitHub Logo](/example.jpg)
-Format: ![Timeline example](url)
+Format: ![Timeline example](/example.jpg)
 
 ## Technology
 * HTML/CSS
